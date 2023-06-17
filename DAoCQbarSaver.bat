@@ -34,6 +34,7 @@ goto end
 
 :restore
 set /p filename="Enter the Class or Character name: "
+setlocal enabledelayedexpansion
 set i=0
 
 for /D %%D in (*%filename%*) do (
@@ -46,13 +47,15 @@ set /p choice="Choose a folder to restore from by typing its number: "
 set "backup_folder=%~dp0!folder[%choice%]!"
 
 for %%N in (41,49,50,51,52,53,54,55,56) do (
-    if exist "%backup_folder%\%filename%-%%N.ini" (
-        xcopy /Y "%backup_folder%\%filename%-%%N.ini" "%source_folder%"
+    for %%F in ("%backup_folder%\*%%N.ini") do (
+        xcopy /Y "%%F" "%source_folder%"
     )
 )
-if exist "%backup_folder%\%filename%-143.ign" (
-    xcopy /Y "%backup_folder%\%filename%-143.ign" "%source_folder%"
+
+for %%F in ("%backup_folder%\*143.ign") do (
+    xcopy /Y "%%F" "%source_folder%"
 )
+
 goto end
 :end
 echo -----------------COMPLETE-----------------
