@@ -4,7 +4,7 @@ Save your Qbars!
 ## Requirements
 
 - Windows operating system
-- Dark Age of Camelot installed at the standard location
+- Dark Age of Camelot config files stored at the standard location of: `AppData\Roaming\Electronic Arts\Dark Age of Camelot\LotM`
 
 ## How To Use
 
