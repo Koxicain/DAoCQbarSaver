@@ -33,7 +33,7 @@ if exist "%source_folder%\%filename%-143.ign" (
 goto end
 
 :restore
-set /p filename="Enter the Class or Character name: "
+set /p filename="Enter the Class, Character or Folder name: "
 setlocal enabledelayedexpansion
 set i=0
 
