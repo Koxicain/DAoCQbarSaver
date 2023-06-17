@@ -19,7 +19,7 @@ If you chose to **backup files**:
 
 If you chose to **restore files**:
 
-   - You will be prompted to enter the character name. The script will then display all backup folders that contain the class or character's name.
+   - You will be prompted to enter the Class, Character or Folder name. This will look for the name of the folder you have typed in. The script will then display all backup folders that contain the name you specified.
    - Choose a folder to restore from by typing its corresponding number and press `Enter`.
    - The script will then restore all .ini files and the corresponding .ign file from the selected backup folder to the game's folder.
 
